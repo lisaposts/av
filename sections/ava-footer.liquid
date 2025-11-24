@@ -1,0 +1,66 @@
+<section class="ava-section ava-footer">
+  <div class="ava-container ava-footer__inner">
+    <div>
+      <h3 class="ava-footer__title">{{ section.settings.heading }}</h3>
+      <p class="ava-footer__text">{{ section.settings.text }}</p>
+    </div>
+    {%- if section.settings.newsletter_form -%}
+      {% form 'customer', class: 'ava-footer__form' %}
+        <input
+          type="email"
+          name="contact[email]"
+          required
+          placeholder="{{ section.settings.placeholder }}"
+          class="ava-input"
+        >
+        <button type="submit" class="ava-btn ava-btn--primary">
+          {{ section.settings.button_label }}
+        </button>
+      {% endform %}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ava Verve – Footer CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Build your AI content system, not just another reel."
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Drop your email to get launch updates, free prompts and early access to new playbooks."
+    },
+    {
+      "type": "checkbox",
+      "id": "newsletter_form",
+      "label": "Show newsletter form",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Input placeholder",
+      "default": "Your best email"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Get updates"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ava Verve – Footer CTA",
+      "category": "Ava Verve"
+    }
+  ]
+}
+{% endschema %}
