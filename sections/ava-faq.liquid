@@ -1,0 +1,68 @@
+<section id="faq" class="ava-section ava-faq">
+  <div class="ava-container">
+    <h2 class="ava-section__title">{{ section.settings.heading }}</h2>
+    <p class="ava-section__subtitle">{{ section.settings.subheading }}</p>
+
+    <div class="ava-faq__list">
+      {%- for block in section.blocks -%}
+        <details class="ava-faq__item" {{ block.shopify_attributes }}>
+          <summary class="ava-faq__question">{{ block.settings.question }}</summary>
+          <div class="ava-faq__answer">
+            <p>{{ block.settings.answer }}</p>
+          </div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ava Verve – FAQ",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Questions, answered"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Everything you need to know before diving into the lessons."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Do I need to be good at tech to use this?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "No. If you can copy, paste and tweak, you can implement our playbooks. Everything is explained in simple steps."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ava Verve – FAQ",
+      "category": "Ava Verve",
+      "blocks": [
+        { "type": "faq" },
+        { "type": "faq" },
+        { "type": "faq" }
+      ]
+    }
+  ]
+}
+{% endschema %}
