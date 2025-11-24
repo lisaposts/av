@@ -1,0 +1,130 @@
+body.ava-verve-body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  background: #050509;
+  color: #f9fafb;
+}
+
+.ava-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.ava-section {
+  padding: 4rem 0;
+}
+
+.ava-section__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.ava-section__subtitle {
+  max-width: 640px;
+  color: #9ca3af;
+}
+
+.ava-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(18px);
+  background: rgba(5, 5, 9, 0.8);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.ava-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+}
+
+.ava-logo {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.ava-nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.ava-header__cta {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+/* Buttons */
+
+.ava-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.ava-btn--primary {
+  background: linear-gradient(135deg, #f97316, #ec4899);
+  color: #0b0b10;
+}
+
+.ava-btn--ghost {
+  border-color: rgba(148, 163, 184, 0.6);
+  color: #e5e7eb;
+  background: transparent;
+}
+
+/* Cards, grid, etc. – you can flesh this out later */
+
+.ava-card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: radial-gradient(circle at top left, #111827, #030712);
+  border: 1px solid rgba(31, 41, 55, 0.9);
+}
+
+.ava-benefits__grid,
+.ava-offers__grid,
+.ava-testimonials__grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .ava-benefits__grid,
+  .ava-offers__grid,
+  .ava-testimonials__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.ava-footer-global {
+  border-top: 1px solid rgba(31, 41, 55, 0.9);
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.ava-footer-global__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
